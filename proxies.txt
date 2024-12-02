@@ -1,0 +1,3 @@
+#Just example, please delete!
+http://proxyhost:port
+http://user:pass@proxyhost:port
