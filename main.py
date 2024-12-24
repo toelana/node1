@@ -38,8 +38,8 @@ def log_step(message: str, type: str = "info"):
     print(f"{Fore.WHITE}[{timestamp}] {color}{prefix.get(type, '•')} {message}{Style.RESET_ALL}")
 
 class CaptchaConfig:
-    WEBSITE_KEY = ''
-    WEBSITE_URL = 'https://api.getgrass.io/login'
+    WEBSITE_KEY = 'Ox4AAAAAAA3AMTe5gwdZnlEL'
+    WEBSITE_URL = 'https://api.openloop.so/login'
 class ServiceCapmonster:
     def __init__(self, api_key):
         self.capmonster = TurnstileTask(api_key)
