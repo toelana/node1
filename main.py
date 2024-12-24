@@ -137,7 +137,7 @@ class ProxyManager:
             return "Unknown"
 
 class ApiEndpoints:
-    BASE_URL = "https://api.nodepay.ai/api"
+    BASE_URL = "https://api.openloop.so/api"
     
     @classmethod
     def get_url(cls, endpoint: str) -> str:
@@ -231,9 +231,9 @@ class ReferralClient:
             'accept': '*/*',
             'accept-language': 'en-US,en;q=0.9',
             'content-type': 'application/json',
-            'origin': 'https://app.nodepay.ai',
+            'origin': 'https://openloop.so',
             'priority': 'u=1, i',
-            'referer': 'https://app.nodepay.ai/',
+            'referer': 'https://openloop.so',
             'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
             'sec-ch-ua-mobile': '?0',
             'sec-ch-ua-platform': '"Windows"',
