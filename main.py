@@ -38,9 +38,8 @@ def log_step(message: str, type: str = "info"):
     print(f"{Fore.WHITE}[{timestamp}] {color}{prefix.get(type, '•')} {message}{Style.RESET_ALL}")
 
 class CaptchaConfig:
-    WEBSITE_KEY = '0x4AAAAAAAx1CyDNL8zOEPe7'
-    WEBSITE_URL = 'https://app.nodepay.ai/login'
-
+    WEBSITE_KEY = ''
+    WEBSITE_URL = 'https://api.getgrass.io/login'
 class ServiceCapmonster:
     def __init__(self, api_key):
         self.capmonster = TurnstileTask(api_key)
