@@ -30,16 +30,17 @@ def log_step(message: str, type: str = "info"):
     }
     color = colors.get(type, Fore.WHITE)
     prefix = {
-        "info": "ℹ",
-        "success": "✓",
-        "error": "✗",
-        "warning": "⚠"
+        "info": "â„¹",
+        "success": "âœ“",
+        "error": "âœ—",
+        "warning": "âš "
     }
-    print(f"{Fore.WHITE}[{timestamp}] {color}{prefix.get(type, '•')} {message}{Style.RESET_ALL}")
+    print(f"{Fore.WHITE}[{timestamp}] {color}{prefix.get(type, 'â€¢')} {message}{Style.RESET_ALL}")
 
 class CaptchaConfig:
-    WEBSITE_KEY = 'Ox4AAAAAAA3AMTe5gwdZnlEL'
-    WEBSITE_URL = 'https://api.openloop.so/login'
+    WEBSITE_KEY = '0x4AAAAAAAx1CyDNL8zOEPe7'
+    WEBSITE_URL = 'https://app.nodepay.ai/login'
+
 class ServiceCapmonster:
     def __init__(self, api_key):
         self.capmonster = TurnstileTask(api_key)
@@ -137,7 +138,7 @@ class ProxyManager:
             return "Unknown"
 
 class ApiEndpoints:
-    BASE_URL = "https://api.openloop.so/api"
+    BASE_URL = "https://api.nodepay.ai/api"
     
     @classmethod
     def get_url(cls, endpoint: str) -> str:
@@ -231,9 +232,9 @@ class ReferralClient:
             'accept': '*/*',
             'accept-language': 'en-US,en;q=0.9',
             'content-type': 'application/json',
-            'origin': 'https://openloop.so',
+            'origin': 'https://app.nodepay.ai',
             'priority': 'u=1, i',
-            'referer': 'https://openloop.so',
+            'referer': 'https://app.nodepay.ai/',
             'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
             'sec-ch-ua-mobile': '?0',
             'sec-ch-ua-platform': '"Windows"',
