@@ -206,7 +206,7 @@ class ReferralClient:
         return None
         
     def _generate_credentials(self) -> Tuple[str, str, str]:
-        email_domains = ["@gmail.com", "@outlook.com", "@yahoo.com", "@hotmail.com"]
+        email_domains = ["@gmail.com"]
         username = self.faker.user_name()[:15] + ''.join(random.choices(string.ascii_lowercase + string.digits, k=5))
         email = f"{username}{random.choice(email_domains)}"
         password = (
