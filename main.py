@@ -1,3 +1,5 @@
+import requests
+import json
 import asyncio
 import random
 import string
