@@ -30,12 +30,12 @@ def log_step(message: str, type: str = "info"):
     }
     color = colors.get(type, Fore.WHITE)
     prefix = {
-        "info": "â„¹",
-        "success": "âœ“",
-        "error": "âœ—",
-        "warning": "âš "
+        "info": "ℹ",
+        "success": "✓",
+        "error": "✗",
+        "warning": "⚠"
     }
-    print(f"{Fore.WHITE}[{timestamp}] {color}{prefix.get(type, 'â€¢')} {message}{Style.RESET_ALL}")
+    print(f"{Fore.WHITE}[{timestamp}] {color}{prefix.get(type, '•')} {message}{Style.RESET_ALL}")
 
 class CaptchaConfig:
     WEBSITE_KEY = '0x4AAAAAAAx1CyDNL8zOEPe7'
@@ -206,7 +206,7 @@ class ReferralClient:
         return None
         
     def _generate_credentials(self) -> Tuple[str, str, str]:
-        email_domains = ["@gmail.com"]
+        email_domains = ["@gmail.com", "@outlook.com", "@yahoo.com", "@hotmail.com"]
         username = self.faker.user_name()[:15] + ''.join(random.choices(string.ascii_lowercase + string.digits, k=5))
         email = f"{username}{random.choice(email_domains)}"
         password = (
