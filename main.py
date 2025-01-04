@@ -3,7 +3,6 @@ import random
 import string
 import time
 from typing import Optional, Tuple, Dict
-from curl_cffi import requests
 from colorama import Fore, Style, init
 from faker import Faker
 from datetime import datetime
