@@ -5,4 +5,3 @@ capmonster-python
 python-anticaptcha
 2captcha-python
 anticaptchaofficial
-curl-cffi
